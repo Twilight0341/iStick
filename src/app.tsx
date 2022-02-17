@@ -1,9 +1,7 @@
 import React, { Fragment } from "react";
 import "leaflet/dist/leaflet.css";
 import image from "./image/morning1.svg";
-import { AutoCenter, Grid } from "antd-mobile";
-import { ReactComponent as Image } from "./image/morning1.svg";
-import moment from "moment";
+import { AutoCenter } from "antd-mobile";
 
 export default class HOME extends React.Component {
   render() {
