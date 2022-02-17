@@ -5,6 +5,7 @@ import moment from "moment";
 // import { Link } from "react-router-dom";
 import {
   BrowserRouter,
+  HashRouter,
   Routes,
   Route,
   useNavigate,
@@ -126,7 +127,7 @@ export default class Plug extends React.Component<{}, State> {
   render() {
     return (
       <>
-        <Router initialEntries={["/home"]}>
+        <HashRouter>
           <div className={"app"}>
             <div className={"top"}>
               <NavBar>
@@ -143,6 +144,7 @@ export default class Plug extends React.Component<{}, State> {
             </div>
             <div className={"body"}>
               <Routes>
+                <Route path="/" element={<HOME />} />
                 <Route path="/home" element={<HOME />} />
                 <Route path="/fall" element={<FALL />} />
                 <Route path="/climate" element={<TH />} />
@@ -153,7 +155,7 @@ export default class Plug extends React.Component<{}, State> {
               <Bottom />
             </div>
           </div>
-        </Router>
+        </HashRouter>
       </>
     );
   }
