@@ -43,7 +43,7 @@ export default class HOME extends React.Component {
               src={image}
               style={{
                 width: "100vw",
-                height: "120vh",
+                height: "121vh",
                 overflow: "hidden",
                 backgroundRepeat: "repeat-x",
               }}
