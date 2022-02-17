@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import "leaflet/dist/leaflet.css";
 import image from "./image/morning1.svg";
-import { AutoCenter } from "antd-mobile";
+import { AutoCenter, Grid } from "antd-mobile";
 import { ReactComponent as Image } from "./image/morning1.svg";
 import moment from "moment";
 
@@ -16,6 +16,13 @@ export default class HOME extends React.Component {
             height: "100vh",
           }}
         >
+          <div style={{ fontSize: "3rem", color: "#595959" }}>
+            <AutoCenter style={{ marginBottom: "4%" }}>Good Morning</AutoCenter>
+            <AutoCenter style={{ marginBottom: "4%" }}>
+              Welcome to use
+            </AutoCenter>
+            <AutoCenter style={{ marginBottom: "4%" }}>I-STICK</AutoCenter>
+          </div>
           <div
             style={{
               display: "flex",
@@ -38,7 +45,7 @@ export default class HOME extends React.Component {
               src={image}
               style={{
                 width: "100vw",
-                height: "170vh",
+                height: "120vh",
                 overflow: "hidden",
                 backgroundRepeat: "repeat-x",
               }}

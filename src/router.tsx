@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { NavBar, TabBar, Modal, Divider } from "antd-mobile";
 import { ExclamationCircleFill } from "antd-mobile-icons";
+import moment from "moment";
 // import { Link } from "react-router-dom";
 import {
   BrowserRouter,
@@ -57,11 +58,11 @@ const Bottom: FC = () => {
       title: "SPO2",
       icon: <MessageOutline />,
     },
-    {
-      key: "/me",
-      title: "Account",
-      icon: <UserOutline />,
-    },
+    // {
+    //   key: "/me",
+    //   title: "Account",
+    //   icon: <UserOutline />,
+    // },
   ];
 
   return (
@@ -87,7 +88,15 @@ export default class Plug extends React.Component<{}, State> {
 
     this.ws.onmessage = (e) => {
       if (e.data === "alert") {
-        Modal.alert({
+        Modal.show({
+          closeOnAction: true,
+          actions: [
+            {
+              key: "close",
+              text: "Close",
+              primary: true,
+            },
+          ],
           header: (
             <ExclamationCircleFill
               style={{
@@ -99,11 +108,12 @@ export default class Plug extends React.Component<{}, State> {
           title: "Attention",
           content: (
             <>
-              <div style={{ fontSize: "large" }}>Stick 1: Lam Chi Kin</div>
+              <div style={{ fontSize: "large" }}>Stick 1: Ngan Pak Kin</div>
               <Divider />
               <div style={{ fontSize: "medium" }}>
-                We detected the stick user fall down. Please Confirm.
+                We detected the I-STICK user fell down. Please Confirm.
               </div>
+              <div style={{ fontSize: "medium" }}>{moment().format("LTS")}</div>
             </>
           ),
         });

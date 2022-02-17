@@ -14,6 +14,7 @@
     "@types/react-router-dom": "^5.3.3",
     "antd-mobile": "^5.0.0-rc.27",
     "leaflet": "^1.7.1",
+    "leaflet-defaulticon-compatibility": "^0.1.1",
     "moment": "^2.29.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -30,7 +31,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+<<<<<<< Updated upstream
   "proxy": "http://localhost:5000",
+=======
+>>>>>>> Stashed changes
   "eslintConfig": {
     "extends": [
       "react-app",
